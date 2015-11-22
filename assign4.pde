@@ -164,9 +164,6 @@ void draw() {
      frameRate(60);
     }
     
-    
-    
-    
    if(((fx+30<=exarray[x]+61&&fx+30>=exarray[x]&&fy+30<=eyarray[x]+61&&fy+30>=eyarray[x])||
       (exarray[x]+25<=fx+51&&exarray[x]+25>=fx&&eyarray[x]+25<=fy+51&&eyarray[x]+25>=fy))&&
       disappear[x]==0)
@@ -188,7 +185,7 @@ void draw() {
   ex+=5;
    
   if(exarray[17]>=640)
-  {ex=0;for(int x = 0 ; x < 18 ; x++ ){disappear[x] = 0;}}
+  {ex=0;for(int y = 0 ; y < 18 ; y++ ){disappear[y] = 0;}}
   
   if((fx+25<=tx+38&&fx+25>=tx+3&&fy+25<=ty+38&&fy+25>=ty+3)||(tx+20<=fx+48&&tx+20>=fx+3&&ty+20<=fy+48&&ty+20>=fy+3))
   {image(t,q,w);tx=q;ty=w;if(blood<200){blood+=20;}}
