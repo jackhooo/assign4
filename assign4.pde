@@ -21,8 +21,8 @@ PImage e1;
 PImage e2;
 int boomx;
 int boomy;
-int x;
-int g;
+int px;
+int pg;
 int y;
 int r;
 int q;
@@ -60,9 +60,9 @@ void setup () {
   s2 = loadImage("img/start2.png");
   e1 = loadImage("img/end1.png");
   e2 = loadImage("img/end2.png");
-  x = 0;
+  px = 0;
   c = 0;
-  g = -640;
+  pg = -640;
   ey = floor(random(440));
   ex = 0;
   ey = floor(random(440));
@@ -102,12 +102,12 @@ void draw() {
   if(fy>430){fy=440;}
   if(fy<0){fy=-10;}
   
-  x = x+1;
-  if(x==640)x=-640; 
-  g = g+1;
-  if(g==640)g=-640;
-  image(p0, x, 0);
-  image(p1, g , 0);
+  px = px+1;
+  if(px==640)px=-640; 
+  pg = pg+1;
+  if(pg==640)pg=-640;
+  image(p0, px, 0);
+  image(p1, pg , 0);
   
   if(ex==0)
   {ey=y;ey+=140;} 
