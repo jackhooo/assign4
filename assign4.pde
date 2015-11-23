@@ -142,9 +142,6 @@ void draw() {
       
     }
     
-   //if(((fx+30<=exarray[x]+61&&fx+30>=exarray[x]&&fy+30<=eyarray[x]+61&&fy+30>=eyarray[x])||
-      //(exarray[x]+25<=fx+51&&exarray[x]+25>=fx&&eyarray[x]+25<=fy+51&&eyarray[x]+25>=fy))&&
-      //disappear[x]==0)
    if( ( fx <= exarray[x]+40 && fx >= exarray[x]-40 && fy <= eyarray[x]+50 && fy >= eyarray[x]-50 ) && disappear[x]==0 )
    {
     disappear[x]=1;blood-=40;
@@ -166,7 +163,6 @@ void draw() {
   if(exarray[17]>=640)
   {ex=0;for(int y = 0 ; y < 18 ; y++ ){disappear[y] = 0;}}
   
-  //if((fx+25<=tx+38&&fx+25>=tx+3&&fy+25<=ty+38&&fy+25>=ty+3)||(tx+20<=fx+48&&tx+20>=fx+3&&ty+20<=fy+48&&ty+20>=fy+3))
   if(fx <= tx+40 && fx>=tx-40 && fy <= ty+40 && fy>= ty-40)
   {image(t,q,w);tx=q;ty=w;if(blood<200){blood+=20;}}
   else{image(t,tx,ty);}
